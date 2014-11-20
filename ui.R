@@ -1,0 +1,81 @@
+library(shiny)
+shinyUI(pageWithSidebar(
+    headerPanel("GSEA"),
+    sidebarPanel(
+        h3('Setup GSEA'),
+        selectInput('contr1', 
+                    label = 'Select first factor:',
+                    choices = c("None" = "None",
+                                "Control_m" = "Control_m",
+                                "Control_fm" = "Control_fm",
+                                "Irradiation_m" = "Irradiation_m",
+                                "Irradiation_fm" = "Irradiation_fm",
+                                "Dioxin_m" = "Dioxin_m",
+                                "Dioxin_fm" = "Dioxin_fm",
+                                "formaldehyde_m" = "formaldehyde_m",
+                                "formaldehyde_fm" = "formaldehyde_fm",
+                                "toluene_m" = "toluene_m",
+                                "toluene_fm" = "toluene_fm"),
+                    selected = NULL,
+                    multiple = FALSE
+        ),
+        selectInput('contr2', 
+                    label = 'Select second factor:',
+                    choices = c("None" = "None",
+                                "Control_m" = "Control_m",
+                                "Control_fm" = "Control_fm",
+                                "Irradiation_m" = "Irradiation_m",
+                                "Irradiation_fm" = "Irradiation_fm",
+                                "Dioxin_m" = "Dioxin_m",
+                                "Dioxin_fm" = "Dioxin_fm",
+                                "formaldehyde_m" = "formaldehyde_m",
+                                "formaldehyde_fm" = "formaldehyde_fm",
+                                "toluene_m" = "toluene_m",
+                                "toluene_fm" = "toluene_fm"),
+                    selected = NULL,
+                    multiple = FALSE
+        ),
+        selectInput('dexpmeth', 
+                    label = 'Select diffExp method:',
+                    choices = c("nbinom" = "nbinom"),
+                    selected = NULL,
+                    multiple = FALSE
+        ),
+        numericInput('dexpsig',
+                     label = 'Enter significance for diffExp',
+                     value = 0.05,
+                     min = 0,
+                     max = 1,
+                     step = 0.01
+        ),
+        selectInput('gscgroup', 
+                    label = 'Select GO ontology for gene groups:',
+                    choices = c("biological_process" = "biological_process",
+                                "molecular_function" = "molecular_function",
+                                "cellular_component" = "cellular_component"),
+                    selected = NULL,
+                    multiple = FALSE
+        ),
+        numericInput('GSAsign',
+                     label = 'Enter significance for GSA',
+                     value = 0.05,
+                     min = 0,
+                     max = 1,
+                     step = 0.01
+        ),
+        numericInput('GSAcutoff',
+                     label = 'Enter p cutoff for GSA',
+                     value = 0.05,
+                     min = 0,
+                     max = 1,
+                     step = 0.01
+        ),
+        submitButton('Run')
+    ),
+    mainPanel(
+        verbatimTextOutput('osetup'),
+        plotOutput("histPlot"),
+        plotOutput('boxplotPlot'),
+        plotOutput('networkPlot')
+    )
+))

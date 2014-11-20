@@ -1,0 +1,3 @@
+This is a temporal project, 
+ - data belong to Alexey Moskalev, see paper Mining Gene Expression Data for Pollutants (Dioxin, Toluene, Formaldehyde) and Low Dose of Gamma-Irradiation
+ - a part of code belong to developers of R (bioconductor) package Piano, see http://www.bioconductor.org/packages/release/bioc/html/piano.html 
