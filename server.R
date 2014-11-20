@@ -25,7 +25,7 @@ loadPackages <- function() {
     source("./R code/networkPlot.R")
 }
 
-# setwd("C:/Users/user/Google Drive/Work/Semantic research framework/RFBR 2014, Aging gene ontology on invertibrates/GSEA/GSEA_vc01")
+setwd("/var/shiny-server/www/GSEA_vc01/")
 
 loadPackages()
 

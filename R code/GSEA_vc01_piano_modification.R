@@ -118,6 +118,7 @@ for (contrast in contrasts) {
     }
 }
 
+g <- readRDS("./Data/GSA_hyper_formaldehyde_m - Control_m_biological_process_0.05.rds")
 
 #############
 networkPlot(gsah,class="non",significance=0.05)
