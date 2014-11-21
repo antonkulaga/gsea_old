@@ -1,0 +1,15 @@
+Package: gsea
+Version: 0.1
+Date: 2014-11-21
+Title: Gene sets enrichment analyses
+Authors@R: c(person("Dmitry Borisoglebsky", "Developer", role = c("aut", "cre"),
+                     email = "dmitry.borisoglebsky@gmail.com"))
+Author: Dmitry Borisoglebsky with contributions from Anton Kulaga and Alexey Moskalev
+Maintainer: Dmitry Borisoglebsky  <dmitry.borisoglebsky@gmail.com>
+Depends: R (>= 3.0.2), nlme, DESeq, affy, affyPLM, plier, limma, biomaRt, org.Dem.eg.db, igraph, marray, AnnotationDbi, gplots
+Suggests: MASS
+Description: A short (one paragraph) description of what
+  the package does and why it may be useful.
+License: GPL (>= 2)
+URL: https://github.com/dborisog
+BugReports: https://github.com/dborisog/GSEA_vc01/issues
