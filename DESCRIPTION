@@ -8,8 +8,7 @@ Author: Dmitry Borisoglebsky with contributions from Anton Kulaga and Alexey Mos
 Maintainer: Dmitry Borisoglebsky  <dmitry.borisoglebsky@gmail.com>
 Depends: R (>= 3.0.2), nlme, DESeq, affy, affyPLM, plier, limma, biomaRt, org.Dem.eg.db, igraph, marray, AnnotationDbi, gplots
 Suggests: MASS
-Description: A short (one paragraph) description of what
-  the package does and why it may be useful.
+Description: Gene Sets enrichment script
 License: GPL (>= 2)
 URL: https://github.com/dborisog
 BugReports: https://github.com/dborisog/GSEA_vc01/issues

@@ -6,11 +6,12 @@ source("http://bioconductor.org/biocLite.R")
 sources <- c("loadData.R","extractFactors.R","runQC.R","diffExp.R","loadGSC.R","checkLoadArg.R","GSCstatBatch.R","runGSA.R","runGSAhyper.R","networkPlot.R")
 
 loadPackages <- function(pkgs,base,src) {
-    for(lib in pkgs){
-      if(!require(lib)) {
+  library()  
+    for(lib in pkgs){     
+      if( !require(character.only = TRUE,package = lib, quietly = TRUE) ) {
         print(paste("trying to install",lib,"..."))
-        biocLite(lib)
-        library(lib)
+        biocLite(lib, dependencies=TRUE)
+        #library(lib)
         #if(!try(biocLite(lib))) 
         #stop(paste("package ",lib,"is missing"))                          
       }

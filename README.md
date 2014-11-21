@@ -13,3 +13,25 @@ In RStudio you
  - load Shiny library library('Shiny')
  - set working directory to the one with ui.R and server.R with command setwd("full path here")
  - initiate Shiny app with runApp() command.
+ 
+
+TROUBLESHOOTING:
+----------------
+ 
+ If you are using Ubuntu/Mint you may also need to install some linux packages (look into errors and see what is missing, sometimes you have to google for them), like:
+ ```
+ sudo apt-get install  libxml2-dev
+ sudo apt-get install  gfortran
+ sudo apt-get install r-cran-rgl 
+ ```
+You can also have an issue with permissions "installed directory not writable, cannot update packages". One of the possible
+ways (but not the safe one) to fix it is to get to know where R is installed by:
+
+```
+whereis R 
+```
+and then apply to them
+
+```
+sudo chown -R 777 /pathto/R/folder
+```
