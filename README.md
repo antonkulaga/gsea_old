@@ -33,5 +33,5 @@ whereis R
 and then apply to them
 
 ```
-sudo chown -R 777 /pathto/R/folder
+sudo chown -R 775 /pathto/R/folder
 ```
